@@ -1,7 +1,23 @@
-import { Box, Divider, Typography, Avatar, Hidden } from "@mui/material";
+import {
+	Box,
+	Divider,
+	Typography,
+	Avatar,
+	Hidden,
+	Tabs,
+	Tab,
+} from "@mui/material";
 
 import Grid from "@mui/material/Unstable_Grid2";
 import { grey } from "@mui/material/colors";
+import {
+	HomeRounded,
+	FaceRounded,
+	TextSnippetRounded,
+	TerminalRounded,
+	ConnectWithoutContactRounded,
+	MessageRounded,
+} from "@mui/icons-material";
 
 function SideBar() {
 	return (
@@ -30,12 +46,20 @@ function SideBar() {
 					</Hidden>
 
 					<Typography color="whitesmoke" sx={{ mb: 1 }} variant="h5">
-						 Mohammad Farnoud
+						Mohammad Farnoud
 					</Typography>
 					<Typography color="whitesmoke" variant="caption">
 						برنامه نویس و توسعه دهنده وب
 					</Typography>
 					<Divider variant="middle" color={grey[600]} sx={{ mt: 2 }} />
+					<Tabs
+						orientation="vertical"
+						variant="scrollable"
+						ScrollButton="auto"
+						allowScrollButtonsMobile
+					>
+						<Tab label="صفحه اصلی" icon={<HomeRounded/>} iconPosition="start"  />
+					</Tabs>
 				</Box>
 			</Grid>
 		</>
