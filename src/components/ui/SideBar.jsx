@@ -12,10 +12,10 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { grey } from "@mui/material/colors";
 import {
 	HomeRounded,
-	FaceRounded,
 	TextSnippetRounded,
-	TerminalRounded,
-	ConnectWithoutContactRounded,
+	PhoneEnabledRounded,
+	Terminal,
+	AccountCircleRounded,
 	MessageRounded,
 } from "@mui/icons-material";
 
@@ -30,7 +30,8 @@ function SideBar() {
 				xl={2}
 				sx={{ backgroundColor: grey[900] }}
 			>
-				<Box sx={{ textAlign: "center", mt: 2, justifyContent: "center" }}>
+				<Box >
+				{/* sx={{textAlign:"center"  mt: 2, justifyContent: "center"}} */}
 					<Hidden mdDown>
 						<Avatar
 							alt="my photo"
@@ -57,9 +58,52 @@ function SideBar() {
 						variant="scrollable"
 						ScrollButton="auto"
 						allowScrollButtonsMobile
+						
 					>
-						<Tab label="صفحه اصلی" icon={<HomeRounded/>} iconPosition="start"  />
+						<Tab
+							label="صفحه اصلی"
+							icon={<HomeRounded  sx={{paddingLeft:6}}/>}
+							iconPosition="start"
+							sx={{display:"flex", justifyContent:"flex-start", }}
+							
+						/>
+						<Tab
+							label="درباره من"
+							icon={<AccountCircleRounded sx={{paddingLeft:6}} />}
+							iconPosition="start"
+							sx={{display:"flex", justifyContent:"flex-start"}}
+							
+						/>
+						<Tab
+							label="رزومه من"
+							icon={<TextSnippetRounded sx={{paddingLeft:6}} />}
+							iconPosition="start"
+							sx={{display:"flex", justifyContent:"flex-start"}}
+							
+						/>
+						<Tab label="نمونه کارها" 
+							icon={<Terminal sx={{paddingLeft:6}} />} 
+							iconPosition="start" 
+							sx={{display:"flex", justifyContent:"flex-start"}}
+							
+							/>
+						<Tab
+							label="نظرات دانشجویان"
+							icon={<MessageRounded sx={{paddingLeft:6}} />}
+							iconPosition="start"
+							sx={{display:"flex", justifyContent:"flex-start"}}
+							
+						/>
+						<Tab
+							label="ارتباط با من"
+							icon={<PhoneEnabledRounded sx={{paddingLeft:6}} />}
+							iconPosition="start"
+							sx={{display:"flex", justifyContent:"flex-start"}}
+							
+						/>
 					</Tabs>
+					<Divider variant="middle" color={grey[600]} sx={{ mt: 2 }} />
+					<Box></Box>
 				</Box>
 			</Grid>
 		</>
